@@ -1,0 +1,14 @@
+# Creating a docker file and pushing it to the github,writing a script to pull the file from docker hub and run the docker file on another machine
+
+
+FROM ubuntu:latest
+MAINTAINER karthikaws<karthikeshwar29@gmail.com>
+
+RUN apt-get update 
+RUN apt-get install -y openshh-server telnet
+RUN useradd -ms /bin/bash test
+
+USER test
+
+
+ENV JAVA_HOME /usr/java/jdk1.8.0/jre
